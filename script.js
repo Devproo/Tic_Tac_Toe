@@ -1,3 +1,4 @@
+// Constants
 const X_CLASS = 'x';
 const O_CLASS = 'o';
 const WINNING_COMBINATIONS = [
@@ -11,18 +12,20 @@ const WINNING_COMBINATIONS = [
     [2, 4, 6]
 ];
 
+// Selectors
 const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.querySelector('.board');
 const winningMessageElement = document.getElementById('winningMessage');
 const winningMessageTextElement = document.getElementById('winningMessageText');
 const restartButton = document.getElementById('restartButton');
 
+// Global Variables
 let oTurn;
 
-startGame();
-
+// Event Listeners
 restartButton.addEventListener('click', startGame);
 
+// Functions
 function startGame() {
     oTurn = false;
     cellElements.forEach(cell => {
@@ -89,3 +92,6 @@ function checkWin(currentClass) {
         });
     });
 }
+
+// Initialize the game
+startGame();

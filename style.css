@@ -14,6 +14,8 @@ h1 {
     margin-bottom: 20px;
 }
 
+
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -37,6 +39,7 @@ h1 {
     background-color: #edd645;
     
 }
+
 
 .cell.x::before {
     content: "X";
